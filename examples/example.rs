@@ -24,4 +24,9 @@ fn main() {
     let edn: Edn = edn!(42 43 44);
     // UInt(42)
     println!("{edn:?}");
+
+    let num = 4242;
+    let edn: Edn = edn!(#tag num);
+    // UInt(4242)
+    println!("{edn:?}");
 }

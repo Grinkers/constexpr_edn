@@ -60,7 +60,7 @@ fn as_code(edn: Edn) -> String {
         Edn::Char(c) => format!("Edn::Char({c})"),
         Edn::Nil => String::from("Edn::Nil"),
         Edn::Empty => String::from("Edn::Empty"),
-        Edn::Tagged(tag, edn) => format!("Edn::Tagged({tag}, {edn})"),
+        Edn::Tagged(_tag, n) => format!("Edn::UInt({n})"),
         e => todo!("Unexpected non-exhaustive Edn value: {e:?}."),
     }
 }
